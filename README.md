@@ -1,3 +1,15 @@
+
+
+Una vez clonado el repositorio, para ejecutar el proyecto es  necesario ejecutar npm i en la terminal de comandos para instalar el paquete de node_modules.
+
+Para lanzar el servidor, se usará el comando ng serve --o, este comando ejecutará la página en http://localhost:4200.
+
+
+
+
+
+
+
 # TechnicalTest
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
