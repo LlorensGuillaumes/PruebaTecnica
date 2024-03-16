@@ -1,0 +1,82 @@
+<form (ngSubmit)="searchUsers()" class="form">
+  <h2>Buscar usuario</h2>
+  <div class="form_items">
+    <input
+      type="text"
+      id="name"
+      name="name"
+      [(ngModel)]="searchFields.name"
+      placeholder="Nombre"
+    />
+
+    <input
+      type="text"
+      id="surname"
+      name="surname"
+      placeholder=" Primer apellido"
+      [(ngModel)]="searchFields.surname"
+    />
+
+    <input
+      type="text"
+      id="surname2"
+      name="surname2"
+      placeholder="Segundo apellido"
+      [(ngModel)]="searchFields.surname2"
+    />
+
+    <input
+      type="text"
+      id="email"
+      name="email"
+      [(ngModel)]="searchFields.email"
+      placeholder="email"
+    />
+  </div>
+
+  <button type="submit">Buscar</button>
+</form>
+
+<div *ngIf="usersToShow.length > 0" class="list_container">
+    <ul>
+        <li
+          class="list_container headers"
+          
+        >
+          <div class="users_list " >
+            <p class="list_item">Nombre</p>
+            <p class="list_item">Primer apellido</p>
+            <p class="list_item">Segundo apellido</p>
+            <p class="list_item">email</p>
+          </div>
+        </li>
+      </ul>
+  <ul>
+    <li
+      *ngFor="let user of usersToShow; let i = index"
+      class="list_container"
+      [ngClass]="{ odd: i % 2 !== 0 }"
+    >
+      <div class="users_list" [ngClass]="{ odd: i % 2 !== 0 }">
+        <p class="list_item">{{ user.name }}</p>
+        <p class="list_item">{{ user.surname }}</p>
+        <p class="list_item">{{ user.surname2 }}</p>
+        <p class="list_item">{{ user.email }}</p>
+      </div>
+    </li>
+  </ul>
+  <div class="paginacion">
+    <p>página {{ actualPage }} de {{ totalPages }}</p>
+    <div class="page_change">
+      <button (click)="previousPage()" [disabled]="actualPage === 1">
+        Anterior
+      </button>
+      <button (click)="nextPage()" [disabled]="actualPage === totalPages">
+        Siguiente
+      </button>
+    </div>
+  </div>
+</div>
+<div *ngIf="filteredUsers.length === 0">
+  <p>No se encontraron usuarios.</p>
+</div>

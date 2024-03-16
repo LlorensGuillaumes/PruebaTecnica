@@ -1,0 +1,71 @@
+.users_list {
+  display: flex;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+  margin-bottom: 0.2rem;
+  width: 80%;
+}
+.list_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.items {
+  margin-bottom: 0.5rem;
+  background-color: grey;
+}
+.paginacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.paginacion p{
+    margin-bottom: 0.5rem;
+}
+.page_change {
+  display: flex;
+  gap: 2rem;
+}
+button {
+  background-color: rgb(105, 230, 230);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  width: 5rem;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+
+  .form_items {
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+input {
+  height: 1.5rem;
+  padding: 0.3rem;
+  width: 15rem;
+  border-radius: 1rem;
+}
+.list_item {
+  display: fles;
+  justify-content: center;
+  width: 30%;
+  height: 1.5rem;
+}
+ul {
+  width: 80%;
+}
+.odd {
+  background-color: rgb(207, 204, 204);
+}
+.headers{
+    background-color: rgb(170, 164, 164);
+}
